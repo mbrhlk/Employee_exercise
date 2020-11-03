@@ -2,7 +2,7 @@ package ca.java.exercise;
 
 public class HourlyEmployee extends Employee {
 	private int hoursWorking;
-	private int payRate = 15;
+	private int payRate;
 	
 	public HourlyEmployee(
 			String firstName, 
@@ -18,9 +18,14 @@ public class HourlyEmployee extends Employee {
 		setHoursWorking(hoursWorking);
 	}
 	
-	public double getPayRate(double totalAmount) {
-		return (totalAmount * payRate) /100;
+	public static void main(String[] args) {
+	
+		
 	}
+	
+	public double getPayRate(double totalAmount) {
+		return (hoursWorking * payRate);
+		}
 	
 	private void setHoursWorking(int hoursWorking) {
 		if(hoursWorking<=40 && hoursWorking>=1) {

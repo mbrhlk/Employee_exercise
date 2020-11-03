@@ -7,7 +7,14 @@ public class Employee {
 	private int startMonth;
 	private int startYear;
 	private String phoneNum;
+	private double totalIncome;
 	
+	public double calculateIncome(int payRate, int hoursWorking){
+		totalIncome = payRate * hoursWorking;
+		return totalIncome;
+	}
+	
+
 	public Employee(String firstName, String lastName, String email, int startMonth, int startYear, String phoneNum) {
 		setFirstName(firstName);
 		setLastName(lastName);
@@ -66,23 +73,16 @@ public class Employee {
 		} else {
 			this.phoneNum = "Unknown";
 		}
+		
+	String toString() {
+		return "Name : " + getFirstName() + " " + getLastName() +
+				"\nEmail : " + getEmail() + 
+				"\nStartMonth : " + getStartmonth();
+		}
 	}
 }
 
-//public String toString() {
-//	return "User Information \nFirst Name : " + firstName + 
-//			"\nLast Name : " + lastName +
-//			"\nEmail : " + email +
-//			"\nPhone Number : " + phoneNum;
-//	}
-//
-//public int getTotalIncome(double totalIncome, double payRate, double hoursWorking) {
-//	return super hoursWorking(totalIncome) + 
-//			(hoursWorking * payRate)/hoursWorking;
-//	return 0;
-//}
-//}
-//
+
 
 
 

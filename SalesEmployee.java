@@ -1,34 +1,32 @@
-//package ca.java.exercise;
-//
-//public class SalesEmployee extends Employee {
-//	private int totalSales;
-//	private int commitionRate = 10;
-//
-//	public void SalesEmloyee(int totalSales, int COMMITION_RATE) {
-//	setTotalSales(totalSales);
-//	Object commitionRate = null;
-//	setCommitionRate((int) commitionRate);
-//	
-//	
-//	}
-//
-//	private void setCommitionRate(int commitionRate) {
-//		if(commitionRate > 0) {
-//			this.commitionRate  = commitionRate;
-//		} else {
-//			this.commitionRate = 0;
-//		}
-//		
-//	}
-//
-//	private int setTotalSales(int totalSales) {
-//		return totalSales;
-//
-//	
-//	}
-//	
-//}
-//
-//
-//
-//
+package ca.java.exercise;
+
+public class SalesEmployee extends Employee {
+	private double totalSales;
+	private double commitionRate;
+
+	public SalesEmployee(String firstName, String lastName, String email, int startMonth, int startYear, double commitionRate, double totalSales, String phoneNum) {
+		super(firstName, lastName, email, startMonth, startYear, phoneNum);
+		getCommitionRate(commitionRate);
+		getTotalSales(totalSales);
+	}
+
+	private double getCommitionRate(double commitionRate) {
+		if(commitionRate < 0) {
+			return 1;
+		} else {
+			return this.commitionRate;
+		}
+		
+	}
+
+	private double getTotalSales(double totalSales) {
+		return totalSales;
+
+	
+	}
+	
+}
+
+
+
+
